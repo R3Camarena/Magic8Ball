@@ -10,12 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
+    // Array of the images to be randomly displayed
+    let ballArray = [
+        UIImage(imageLiteralResourceName: "ball1"),
+        UIImage(imageLiteralResourceName: "ball2"),
+        UIImage(imageLiteralResourceName: "ball3"),
+        UIImage(imageLiteralResourceName: "ball4"),
+        UIImage(imageLiteralResourceName: "ball5")
+    ]
 
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func askButtonPressed(_ sender: UIButton) {
-        
+        // Randomize the answer and diaply a ball image
         imageView.image = ballArray.randomElement()
     }
     
